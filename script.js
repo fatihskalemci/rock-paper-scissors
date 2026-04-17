@@ -11,6 +11,11 @@ function getComputerChoice() {
   return choice
 }
 
+function getHumanChoice() {
+  let choice = prompt("rock, paper or scissors?");
+  return choice
+}
+
 function playRound(playerSelection, computerSelection) {
   playerSelection = playerSelection.toLowerCase();
   computerSelection = computerSelection.toLowerCase();
@@ -43,7 +48,7 @@ function game() {
 
   for (let i = 0; i < 5; i++) {
     console.log(`Player ${playerScore} - ${computerScore} Computer`)
-    let playerSelection = prompt("rock, paper or scissors?");
+    let playerSelection = getHumanChoice();
     let computerSelection = getComputerChoice();
     let round = playRound(playerSelection, computerSelection);
     console.log(`Player chose: ${playerSelection} | Computer chose: ${computerSelection}`)
